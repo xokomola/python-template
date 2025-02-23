@@ -6,11 +6,10 @@ We have picked a couple of reasonable defaults from the large Python ecosystem.
 
 Use [Issues](https://github.com/fuas-dverse/python-template/issues) for improving or suggesting changes to this template.
 
-- [VS Code](https://code.visualstudio.com) editor (with the Microsoft Python extensions: Python, Python Debugger, Flake and Black)
+- [VS Code](https://code.visualstudio.com) editor (needs extensions: Python, Python Debugger and Ruff)
 - [Conda](https://anaconda.org) virtual environments
-- [Poetry](https://python-poetry.org)
-- [Flake8](https://github.com/PyCQA/flake8)
-- [Black](https://github.com/psf/black)
+- [Poetry](https://python-poetry.org) 
+- [Ruff](https://github.com/astral-sh/ruff)
 - [Setuptools](https://setuptools.pypa.io)
 
 
