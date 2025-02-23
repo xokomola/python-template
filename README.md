@@ -8,7 +8,7 @@ Use [Issues](https://github.com/fuas-dverse/python-template/issues) for improvin
 
 - [VS Code](https://code.visualstudio.com) editor (needs extensions: Python, Python Debugger and Ruff)
 - [Conda](https://anaconda.org) virtual environments
-- [Poetry](https://python-poetry.org) 
+- [Poetry](https://python-poetry.org)
 - [Ruff](https://github.com/astral-sh/ruff)
 - [Setuptools](https://setuptools.pypa.io)
 
@@ -48,8 +48,7 @@ conda activate dverse
 
 This script will run quite a few automated checks on your code, and it may even reformat your code.
 
-- Code linting using Flake8
-- Code formatting with Black
+- Code linting and formatting using Ruff
 - Reorder python imports
 - Check YAML code
 - Fix whitespace issues
@@ -63,4 +62,3 @@ This seems quite agressive but once you get used to it you just stop worrying ab
 We will use this template to provide a basic Python set up for new code projects and offer a good starting point based on good practices.
 
 For now I prefer to get issues reported to me personally. You can verify [Issues](https://github.com/fuas-dverse/python-template/issues) to see what changes are planned.
-
