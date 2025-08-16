@@ -46,7 +46,7 @@ uv run ruff format
 
 Instead of running this yourself, set up your IDE to perform auto formatting. Ensure that the autoformatting matches the configuration set up for `ruff` as it will be run automatically before committing by the `pre-commit` hooks.
 
-See [ruff documentation](https://docs.astral.sh/ruff)
+See [ruff documentation](https://docs.astral.sh/ruff).
 
 
 ## Type checking
@@ -59,7 +59,7 @@ Note that this will produce an error. I did this to illustrate how `ty` spots is
 
 Although [ty](https://github.com/astral-sh/ty) is not flagged safe for production yet. It does do it's job quite well already. If this doesn't suit you feel free to replace with [mypy](https://mypy-lang.org).
 
-See [ty documentation](https://docs.astral.sh/ty)
+See [ty documentation](https://docs.astral.sh/ty).
 
 
 ## Environment variables
