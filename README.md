@@ -57,6 +57,10 @@ uv run ty check
 
 Note that this will produce an error. I did this to illustrate how `ty` spots issues that may not always be caught with `pytest`.
 
+Although [ty](https://github.com/astral-sh/ty) is not flagged safe for production yet. It does do it's job quite well already. If this doesn't suit you feel free to replace with [mypy](https://mypy-lang.org).
+
+See [ty documentation](https://docs.astral.sh/ty)
+
 
 ## Environment variables
 
