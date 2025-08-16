@@ -1,6 +1,4 @@
-.env
-
-# Byte-compiled / optimized / DLL files
+# Compilation
 __pycache__/
 *.py[cod]
 *$py.class
@@ -8,72 +6,38 @@ __pycache__/
 # C extensions
 *.so
 
-# Distribution / packaging
-.Python
-env/
+# Packaging
 build/
-develop-eggs/
 dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-node_modules/
-parts/
-sdist/
-var/
-package*.json
-*.egg-info/
-.installed.cfg
+wheels/
 *.egg
+*.egg-info
 
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
-
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*,cover
+# Testing
+.pytest_cache/
 .hypothesis/
 
-# Translations
-*.mo
+# Coverage
+.tox*
+.coverage*
+.metacov
+coverage.json
+coverage.xml
+coverage.lcov
 
-# Scrapy stuff:
-.scrapy
+# Other tools
+.ruff_cache/
 
-# PyBuilder
-target/
+# Virtual environments
+.venv
 
-# IPython Notebook
-.ipynb_checkpoints
-
-# pyenv
+# Others
+.DS_Store
 .python-version
 
-# virtualenv
-.venv/
-venv/
-ENV/
-
-# MkDocs documentation
-site*/
-
+# Personal
+.env
 tmp/
-
-.DS_Store
-
-poetry.lock
+project.xpr
+*.gz
+*.zip

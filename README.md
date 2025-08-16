@@ -1,64 +1,63 @@
-# Python Project Template
+# Xoko Python Project Template
 
-This is a good starter that has most of the tools we use in our organization already set up.
+This template uses [uv](https://github.com/astral-sh/uv), [ruff](https://github.com/astral-sh/ruff) and [pytest](https://docs.pytest.org) to bootstrap python projects. Also uses [pre-commit](https://pre-commit.com) for more consistency when committing code and managing Git hook scripts.
 
-We have picked a couple of reasonable defaults from the large Python ecosystem.
+I tried to keep the template minimal but added `src`, `tests` and `docs` directories to provide guidance for setting up a project code structure.
 
-Use [Issues](https://github.com/fuas-dverse/python-template/issues) for improving or suggesting changes to this template.
-
-- [VS Code](https://code.visualstudio.com) editor (needs extensions: Python, Python Debugger and Ruff)
-- [Conda](https://anaconda.org) virtual environments
-- [Poetry](https://python-poetry.org)
-- [Ruff](https://github.com/astral-sh/ruff)
-- [Setuptools](https://setuptools.pypa.io)
+Also review `LICENSE` (use your own user handle) to see if it fits your purpose.
 
 
-## Getting started
+## Install
 
-Do not fork or clone this project. Instead, create a new repository and then under Repository Template select `fuas-dverse/python-template`.
+First make sure that `uv` is installed.
 
-Start coding.
+Install the Git hook scripts.
 
-```
-cd DIR
-conda env create -f environment.yaml
-conda activate dverse
-poetry install
-pre-commit install
-code .
+```console
+uv run pre-commit install
 ```
 
-## Notes
+## Usage
 
-### Virtual environments
-
-The environment that is created can be used to keep Python installations separate from the main one. It also helps with providing clean test environments.
-
-We use Conda virtual environments. There are other solutions (virtualenv and venv) but for me conda works just fine.
-
-```
-conda env create -f environment.yaml
-conda activate dverse
+```console
+uv run foo
 ```
 
+Adapt as needed (don't forget to also review `pyproject.toml`).
 
-### Pre-commit
-
-[Pre-commit](https://pre-commit.com) helps maintain Git hook scripts. It will get automatically installed. But you will have to run `pre-commit install` to install the hook on your own machine. The checks that are being done by the pre-commit script are described in `pre-commit-config.yaml`.
-
-This script will run quite a few automated checks on your code, and it may even reformat your code.
-
-- Code linting and formatting using Ruff
-- Reorder python imports
-- Check YAML code
-- Fix whitespace issues
-- Check `setup.cfg`
-
-This seems quite agressive but once you get used to it you just stop worrying about certain formatting issues, and the commits will be cleaner.
+See [uv documentation](https://docs.astral.sh/uv).
 
 
-## Todo
+## Test
 
-We will use this template to provide a basic Python set up for new code projects and offer a good starting point based on good practices.
+```console
+uv run pytest
+```
 
-For now I prefer to get issues reported to me personally. You can verify [Issues](https://github.com/fuas-dverse/python-template/issues) to see what changes are planned.
+See [pytest documentation](https://docs.pytest.org).
+
+
+## Code Formatting and linting
+
+```console
+uv run ruff check
+uv run ruff format
+```
+
+Instead of running this yourself, set up your IDE to perform auto formatting. Ensure that the autoformatting matches the configuration set up for `ruff` as it will be run automatically before committing by the `pre-commit` hooks.
+
+See [ruff documentation](https://docs.astral.sh/ruff)
+
+
+## Type checking
+
+```console
+uv run ty check
+```
+
+Note that this will produce an error. I did this to illustrate how `ty` spots issues that may not always be caught with `pytest`.
+
+
+## Environment variables
+
+Use a `.env` file for adding variables and secrets such as API tokens. This file will not be committed (see `.env.example`).
